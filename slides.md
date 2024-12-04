@@ -1,5 +1,7 @@
 ---
 theme: shibainu
+fonts:
+    mono: "Roboto Mono"
 ---
 
 # Palindromic DNA sequences
@@ -334,4 +336,114 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
+
+---
+
+## Example output
+
+```md {*}{maxHeight:'400px'}
+0
+↓
+AGCT
+||||
+TCGA
+   ↑
+   3
+
+2
+↓
+CTTCTGAAG
+||||-||||
+GAAGTCTTC
+        ↑
+       10
+
+3
+↓
+TTCTGAA
+|||-|||
+AAGTCTT
+      ↑
+      9
+
+4
+↓
+TCTGA
+||-||
+AGTCT
+    ↑
+    8
+
+5
+↓
+CTGAAG
+||--||
+GAAGTC
+     ↑
+    10
+
+7
+↓
+GAAGCTTC
+||||||||
+CTTCGAAG
+       ↑
+      14
+
+8
+↓
+AAGCTT
+||||||
+TTCGAA
+     ↑
+    13
+
+9
+↓
+AGCT
+||||
+TCGA
+   ↑
+  12
+
+12
+↓
+TTCTGAA
+|||-|||
+AAGTCTT
+      ↑
+     18
+
+13
+↓
+TCTGA
+||-||
+AGTCT
+    ↑
+   17
+
+23
+↓
+TTGAA
+||-||
+AAGTT
+    ↑
+   27
+
+23
+↓
+TTGAAA
+||--||
+AAAGTT
+     ↑
+    28
+
+29
+↓
+GTAC
+||||
+CATG
+   ↑
+  32
 ```
