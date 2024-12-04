@@ -31,6 +31,11 @@ if __name__ == "__main__":
     main()
 ```
 
+<!-- 
+- The program starts by getting the sequence from the user.
+
+-->
+
 ---
 
 ## Get input from user
@@ -56,11 +61,38 @@ def get_sequence() -> str | None:
     return sequence
 ```
 
+<!--
+- This is done by the function "get_sequence".
+
+[click]
+
+- The function asks the user to enter either a DNA sequence, or a path to a file containing a DNA sequence.
+
+- If the sequence can be successfully extracted from the user's input, the function returns the sequence.
+
+- Otherwise, while the sequence cannot be extracted from the user input,
+
+[click]
+
+- we tell the user that the "Input type is not acceptable",
+- then we ask them if they would like to retry.
+- We repeat the inner while loop, asking them if they want to retry, until they enter 'Y' for yes, or 'N' for no. 
+
+[click] 
+
+- If the user chooses 'Y' or leaves it blank, we allow them to try to enter the sequence again by continuing the outer while loop.
+- If the user chooses 'N', there is no sequence and os we return None.
+
+[click]
+
+- Thus, the function returns either None, or the sequence as a string.
+-->
+
 ---
 
 ## Check input & extract DNA sequence
 
-```python {1-3|6|7-8|9|10|12|11,13|14-15|11-13,15|6,17}{lines: true}
+```python {1-3|6,17|7-8|9|10|12|11,13|14-15|11-13,15|6,17}{lines: true}
 def is_dna(sequence: str) -> bool:
     sequence = sequence.upper()
     return bool(sequence) and set(sequence).issubset("ACGT")
@@ -79,7 +111,51 @@ def extract_seq_from_input(string: str) -> str | None:
 
     return sequence if is_dna(sequence) else None
 ```
+<!--
+- After the user enters the input, we must check that the input is correct. If so, we extract the sequence from the input.
 
+- We define a function called "is_dna", which checks whether a string is a DNA sequence.
+- It does this by checking that the string is not empty, and that it only contains the letters A, C, G, or T.
+
+[click]
+
+- The "is_dna" function is used by the "extract_seq_from_input" function.
+
+[click]
+
+- This function checks if the user's input is a fasta file.
+- It does this by checking if the string ends in a fasta file extension.
+- If so, the string is the path to a fasta file.
+
+[click]
+
+- We can then open this fasta file
+
+[click]
+
+- and read the lines, stripping the newline characters.
+
+[click]
+
+- We then filter out all the lines that start with a '>',
+
+[click]
+
+- and concatenate the remaining lines to get the full sequence.
+
+[click]
+
+- If the string did not end with a fasta file extension, we assume that the user was attempting to enter the DNA sequence and not a file, so we just return the string.
+
+[click]
+
+- Thus, after extracting the sequence from the fasta file or user input directly,
+
+[click]
+
+the function returns a string if the sequence is a DNA sequence. Otherwise, it returns 'None'.
+
+-->
 ---
 
 ## Continue the program if DNA sequence was extracted successfully
