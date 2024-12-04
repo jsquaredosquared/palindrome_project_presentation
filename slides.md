@@ -219,7 +219,7 @@ def get_palindromes(
     sequence_length = len(sequence)
 
     for i in range(sequence_length):
-        for j in range(i + min_palindrome_length, sequence_length + 1):
+        for j in range(i + int(min_palindrome_length), sequence_length + 1):
             subsequence = sequence[i:j]
             subsequence_rc = reverse_complement(subsequence)
 
