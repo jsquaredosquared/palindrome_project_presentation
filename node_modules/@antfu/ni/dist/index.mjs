@@ -1,0 +1,17 @@
+export { A as AGENTS, C as CLI_TEMP_DIR, x as COMMANDS, I as INSTALL_PAGE, L as LOCKS, U as UnsupportedCommand, v as cmdExists, y as constructCommand, n as detect, e as exclude, g as formatPackageWithUrl, q as getCliCommand, o as getCommand, j as getConfig, k as getDefaultAgent, m as getGlobalAgent, l as limitText, p as parseNa, a as parseNi, b as parseNlx, i as parseNr, c as parseNu, f as parseNun, u as remove, z as resolveCommand, t as run, r as runCli, s as serializeCommand, w as writeFileSafe } from './shared/ni.4b98e4da.mjs';
+import 'node:fs';
+import 'node:path';
+import 'node:process';
+import 'readline';
+import 'events';
+import 'os';
+import 'tty';
+import 'node:module';
+import 'child_process';
+import 'path';
+import 'process';
+import 'stream';
+import 'node:os';
+import 'fs';
+import 'fs/promises';
+import 'node:fs/promises';

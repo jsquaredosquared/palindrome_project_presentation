@@ -1,0 +1,35 @@
+{
+  "name": "@slidev/theme-shibainu",
+  "version": "0.25.0",
+  "description": "Shibainu theme for Slidev",
+  "author": "Inès <ines@inesfendi.com>",
+  "license": "MIT",
+  "homepage": "https://sli.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slidevjs/themes"
+  },
+  "bugs": "https://github.com/slidevjs/themes/issues",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "slidev": ">=v0.47.0"
+  },
+  "slidev": {
+    "colorSchema": "dark",
+    "defaults": {
+      "fonts": {
+        "sans": "Titillium Web",
+        "mono": "Fira Code"
+      }
+    }
+  },
+  "dependencies": {
+    "@slidev/types": "^0.47.0",
+    "codemirror-theme-vars": "^0.1.2",
+    "prism-theme-vars": "^0.2.4"
+  }
+}
