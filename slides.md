@@ -33,7 +33,6 @@ if __name__ == "__main__":
 
 <!-- 
 - The program starts by getting the sequence from the user.
-
 -->
 
 ---
@@ -160,7 +159,7 @@ the function returns a string if the sequence is a DNA sequence. Otherwise, it r
 
 ## Continue the program if DNA sequence was extracted successfully
 
-```python {1-4,13-14|4-5}{lines: true}
+```python {1-4,13-14|1,4-5}{lines: true}
 def main():
     sequence = get_sequence()
 
@@ -208,6 +207,20 @@ def get_min_and_max_lengths() -> dict[str, int | float]:
             lengths[length] = float(user_input)
 
     return lengths
+```
+
+---
+
+## Check if user input is a number (int or float)
+
+```python
+def is_number(string: str) -> bool:
+    parts = string.split(".")
+
+    if len(parts) > 2:
+        return False
+
+    return all(part.isnumeric() for part in parts)
 ```
 
 ---
